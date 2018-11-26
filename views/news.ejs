@@ -1,0 +1,23 @@
+<h1>News</h1>
+
+<% if (news.length>0) { %>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Title</td>
+    <td>Author</td>
+  </tr>
+<% for(var i=0; i < news.length; i++) { %>
+   <tr>
+     <td><%= news[i].id %></td>
+     <td><a href="/news/<%= news[i].id %>"><%= news[i].title %></a></td>
+     <td><%= news[i].author %></td>
+   </tr>
+<% } %>
+</table>
+
+<% } else { %>
+  <p>Empty</p>
+<% } %>
+
+<p style="margin-top:25px;"><a href="/news/add">Add article</a></p>

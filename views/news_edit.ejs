@@ -1,0 +1,14 @@
+<p><a href="/news">News Home</a></p>
+
+<form method="post">
+<p>Title</p>
+<input type="text" name="title" value="<%= news.title %>">
+
+<p>Description</p>
+<textarea name="desc" rows="8" cols="80"><%= news.desc %></textarea>
+
+<p>Author</p>
+<input type="text" name="author" value="<%= news.author %>">
+
+<p><input type="submit" value="수정"></p>
+</form>

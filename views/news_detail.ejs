@@ -1,0 +1,14 @@
+<p><a href="/news">News Home</a></p>
+
+<% if (news) { %>
+  <h1><%= news.title %></h1>
+  <h3>author: <%= news.author %></h3>
+  <p>
+    <%= news.desc %>
+  </p>
+
+  <a href="/news/<%= news.id %>/edit">수정</a>
+  <a href="/news/<%= news.id %>/delete">삭제</a>
+<% } else { %>
+  <p>Not exist</p>
+<% } %>
